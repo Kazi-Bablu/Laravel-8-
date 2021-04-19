@@ -22,5 +22,12 @@ Route::view("users", "users");
 Route::view("about", "about");
 
 //Route::get("users",[UsersController::class,'loadView']);
-Route::post("users",[UsersController::class,'getData']);
-Route::view("login","users.users");
+Route::post("users", [UsersController::class, 'getData']);
+Route::view("login", "users.users");
+
+Route::group(['middleware' => ['protectPage']],function(){
+    Route::view('users1', 'users.users');
+});
+
+Route::view('home', 'home');
+Route::view('noaccess', 'noaccess');
