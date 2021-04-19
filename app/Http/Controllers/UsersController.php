@@ -13,4 +13,9 @@ class UsersController extends Controller
         $data = ['1','2','3','4','5'];
         return view('users',['users'=>$data]);
     }
+
+    public function getData(Request $request)
+    {
+        dd($request->all());
+    }
 }
