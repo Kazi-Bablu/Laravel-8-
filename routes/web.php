@@ -24,6 +24,7 @@ Route::view("about", "about");
 //Route::get("users",[UsersController::class,'loadView']);
 Route::post("users", [UsersController::class, 'getData']);
 Route::get("database", [UsersController::class, 'index']);
+Route::get("getUserData", [UsersController::class, 'getUserData']);
 Route::view("login", "users.users");
 
 Route::group(['middleware' => ['protectPage']],function(){
