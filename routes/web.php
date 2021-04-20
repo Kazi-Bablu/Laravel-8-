@@ -29,5 +29,5 @@ Route::group(['middleware' => ['protectPage']],function(){
     Route::view('users1', 'users.users');
 });
 
-Route::view('home', 'home');
+Route::view('home', 'home')->middleware('agaValidate');
 Route::view('noaccess', 'noaccess');
